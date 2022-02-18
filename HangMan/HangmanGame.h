@@ -1,7 +1,10 @@
 #include "HangmanState.h"
+#include <iostream>
+
+using namespace std; 
 
 /// <summary>
-/// HangmanGame.H
+/// HangmanGame.h
 /// 
 /// Hangman game class definition
 /// 
@@ -32,7 +35,7 @@ public:
 	/// </summary>
 	HangmanState State;
 
-private:
+private: // State and private functions
 
 	/// <summary>
 	/// Determines if the game is running.
@@ -40,14 +43,19 @@ private:
 	bool Running;
 
 	/// <summary>
-	/// Holds the currently selected word.
+	/// Static: holds the current word that is to be guessed
 	/// </summary>
-	char* CurrentWord;
+	static string CurrentWord;
 
 	/// <summary>
-	/// Holds the current string modified to replace the characters not currently guessed by the user with the _ character.
+	/// Static: holds the current partially guessed string, containing all unguessed characters replaced with _s.
 	/// </summary>
-	char* PartiallyGuessedString; 
+	static string PartiallyGuessedString;
+	
+	/// <summary>
+	/// Holds the characters that have already been guessed.
+	/// </summary>
+	static string GuessedCharacters;
 
 	/// <summary>
 	/// Check if the user wishes to play again.

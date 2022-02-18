@@ -14,7 +14,6 @@
 /// * use std::vector instead of arrays
 /// * change all the operations that use C const char* to use std::string 
 /// * allow the user to define the wordlist
-/// * use char literals instead of strings 
 /// * find something else than a hackneyed seed algorithm 
 /// </summary>
 /// <returns></returns>
